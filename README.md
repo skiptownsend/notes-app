@@ -9,8 +9,6 @@ This project exists to learn and practice **agentic development** - using specia
 ### What I'm Learning
 
 - **Multi-Agent Coordination**: How to orchestrate specialized AI agents (orchestrator, TDD agent, code reviewer, git workflow agent, etc.)
-- **Test-Driven Development (TDD)**: Writing tests first, then implementing code to pass them
-- **Git Workflow Best Practices**: Feature branches, conventional commits, pull requests, code review
 - **Engineering Discipline with AI**: Using AI tools as force multipliers, not replacements for sound engineering judgment
 - **Claude Code CLI**: Practical experience with agentic coding tools in a real development environment
 
@@ -59,23 +57,3 @@ Prerequisites installed:
 - Angular CLI
 - Claude Code CLI
 - Git + GitHub CLI
-
-## What This Project Is NOT
-
-This is **not** a production application. It's a learning sandbox for:
-- Understanding agentic development workflows
-- Practicing TDD discipline
-- Learning Claude Code CLI capabilities
-- Building skills in AI-assisted software engineering
-
-## Status
-
-🚧 **In Progress** - Currently setting up the multi-agent environment and learning the workflow.
-
-## Learning Resources
-
-Inspired by LinkedIn discussions on distinguishing between "vibe coding" and professional use of AI development tools by experienced engineers.
-
----
-
-*"AI agents are not a replacement for engineering knowledge - they're an accelerator for engineers who understand SDLC, testing, code review, and architectural principles."*
