@@ -5,16 +5,29 @@ obj/
 *.suo
 *.userosscache
 *.sln.docstates
+TestResults/
 
 # Angular
 node_modules/
 dist/
 .angular/
+coverage/
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Environment
+.env
+.env.local
+*.log
+
+# Docker
+docker-compose.override.yml
