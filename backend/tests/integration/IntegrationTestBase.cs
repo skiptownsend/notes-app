@@ -14,11 +14,9 @@ public class IntegrationTestBase : IClassFixture<WebApplicationFactory<Program>>
         {
             builder.UseEnvironment("Test");
 
-            // Override services for testing if needed
             builder.ConfigureServices(services =>
             {
-                // Add or replace services here for testing
-                // Example: Replace database context with in-memory database
+                // Service overrides for testing will be added here as needed
             });
         });
 

@@ -23,11 +23,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseCors("LocalDevelopment");
 }
 
 app.UseHttpsRedirection();
-
-app.UseCors("LocalDevelopment");
 
 app.UseAuthorization();
 
