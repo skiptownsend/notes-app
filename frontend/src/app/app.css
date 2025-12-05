@@ -1,0 +1,19 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin: 0;
+}
+
+main {
+  min-height: 60vh;
+}
