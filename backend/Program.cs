@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using NotesApi.Data;
+using NotesApi.Repositories;
+using NotesApi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +17,18 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+
+// Configure Entity Framework with In-Memory Database
+builder.Services.AddDbContext<NotesDbContext>(options =>
+{
+    options.UseInMemoryDatabase("NotesDb");
+});
+
+// Register repositories
+builder.Services.AddScoped<INotesRepository, NotesRepository>();
+
+// Register services
+builder.Services.AddScoped<INotesService, NotesService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
