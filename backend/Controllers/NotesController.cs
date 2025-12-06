@@ -49,7 +49,7 @@ public class NotesController : ControllerBase
             return BadRequest(new { error = "Content cannot be empty or whitespace" });
         }
 
-        // Explicit length validation (for both runtime and unit test scenarios)
+        // Explicit length validation (ensures consistent behavior in both integration and unit test scenarios)
         if (request.Title.Length > 100)
         {
             return BadRequest(new { error = "Title cannot exceed 100 characters" });
@@ -66,10 +66,11 @@ public class NotesController : ControllerBase
             // Use Created with explicit location URL since GET endpoint doesn't exist yet
             return Created($"/api/notes/{createdNote.Id}", createdNote);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            // Log the exception here in a real application
-            return StatusCode(500, new { error = "An error occurred while creating the note", details = ex.Message });
+            // TODO: Log the full exception details using ILogger for debugging
+            // Security: Never expose internal exception details to clients
+            return StatusCode(500, new { error = "An error occurred while creating the note" });
         }
     }
 }
